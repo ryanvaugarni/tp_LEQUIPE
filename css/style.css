@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
+
+/* reset */
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    background: #222 url(https://upload.wikimedia.org/wikipedia/commons/8/89/PSG-Nantes_Parc_des_Princes_05.jpg)no-repeat fixed center center / cover;
+}
+body{
+    font: 1.6rem 'Roboto', sans-serif;
+    margin: 0;
+}
+*{
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,p,figure,ul,ol{
+    margin: 0;
+    font-weight: 300;
+    padding: 0;
+    list-style: none; 
+}
+a{
+    text-decoration: none;
+    color: #222;
+}
+:root{
+    --color-default: #ccc;
+    --color-good: #2b7dc0;
+    --color-event: #000000;
+    --color-header: #e23131;
+}
+li a{/* bouton des articles */
+    border: 0;
+    background: rgb(190, 187, 187);
+    cursor: pointer;
+    border-radius: 1rem;
+    display: block;
+    transition: all 400ms ease-in-out;
+    color: #f8f1f1;
+    line-height: 4rem;
+    padding: 0 1.2rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+}
+li a:hover{
+    background-color: #838181;
+    transition: all 500ms ease-in-out;
+}
+.img-header{
+    background: url(../asset/image9.png)no-repeat  center center;
+    width: 100%;
+    height: 26vh;
+    background-color: #222;
+}
+.logo{/* ICONE */
+    clip-path: circle(50%);
+    z-index: 2;
+    width: 6rem;
+    height: 6rem;
+}
+.logo1{
+    clip-path: circle(50%);
+    margin-left: 5rem;
+    margin-top: -1rem;
+    z-index: 2;
+    width: 5rem;
+    height: 5rem;
+}
+/* theme */
+.image3{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+header div ul{
+    padding: 3rem;
+    text-align: center;
+    grid-template-columns: repeat(5 ,1fr);
+    color: var(--color-header);
+    grid-gap: 1rem;
+    display: grid;
+}
+header{
+    border: 0.1rem solid transparent;
+    margin: 0 auto;
+    max-width: 80rem;
+    background: rgb(238, 235, 235);
+    position: relative;
+}
+hr{ /* barre d'espace entre les articles */
+    display: block;
+    max-width: 70rem;
+    margin-top:2rem;
+}
+main{
+    max-width: 80rem;
+    background: rgb(238, 235, 235);
+    margin: 0 auto;
+}
+main figure {
+    max-width: 70rem;
+    height: 29rem;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1rem;/* espacement entre les grids */
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+}
+main figure img{
+    display: block;
+    width: 80%;
+    height: 25rem;
+    clip-path: circle(70%);
+}
+main figure figcaption,.app1 figcaption,.app2 figcaption,.app3 figcaption{
+    margin-right: 1rem;
+    padding: 0.5rem;
+    font-style: italic;
+    line-height: 2.3rem;
+}
+main figure figcaption p{
+    width: 30rem; /* à modifier selon les besoins */
+    overflow: hidden
+}
+.image2{
+    order: 2;
+}
+main figure time, .hide1 time , .hide2 time ,.hide3 time{
+    color: rgb(150, 136, 136);
+    padding: 0 0 .5rem;
+    font-style: normal;
+    font-size: 1.5rem;
+}
+main figure h2, .hide1 h2, .hide2 h2, .hide3 h2{
+    font-weight: 300;
+    padding: .5rem;
+}
+/* bouton vers Javascript */
+main button{
+    cursor: pointer;
+    display: block;
+    line-height: 3.5rem;
+    text-align: center;
+    border: solid .1rem #222;
+    margin: 0 auto;
+    width: 17rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    transition: all 500ms ease-in-out;
+    background-color: #dfd7d7;
+}
+button:hover{
+    background-color: #cac7c7;
+    transition: all 500ms ease-in-out;
+}
+main .btn::after{
+    content: 'voir plus +';
+}
+main .moins::after{
+    content: 'voir moins -';
+}
+/* pied de page */
+footer{
+    line-height: 5rem;
+}
+/* bouton des articles pied de page */
+details{
+    max-width: 80rem;
+    margin:1rem auto;
+    border: solid .1rem #ccc;
+    padding: 1rem;
+    background-color: #dfd7d7;
+}
+details summary{
+    list-style-type: none;
+    text-align: center;
+    padding: 1rem;
+    cursor: pointer;
+    margin-right: -1rem;
+}
+details summary::before{
+    display: inline-block;
+    content:"\203A";
+    margin-right: .5rem;
+    transform: rotate(0deg);
+    vertical-align: top;
+}
+details[open] summary::before{
+    content: "\203A";
+    transform: rotate(90deg);
+}
+.menu1{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+.art{
+    border: 0;
+    cursor: pointer;
+    border-radius: 1rem;
+    display: block;
+    transition: all 400ms ease-in-out;
+    color: #252424;
+    line-height: 3rem;
+    margin-right: -1rem;
+    margin-left: 3rem;
+    background-color: transparent;
+    width: 12rem;
+}
+.art:hover{
+    background-color: #e6c1c1;
+    transition: all 500ms ease-in-out;
+}
+.copy{
+    text-align: center;
+    background-color: #e6c1c1;
+}
+/* Javascript */ 
+.hide1,.hide2,.hide3{
+    transition: all ease-in-out .4s;
+    display: none;
+}
+.app1,.app2,.app3{
+    transition: all 0.6s ease-in-out;
+    opacity: 1;
+    max-width: 70rem;
+    height: 29rem;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1rem;/* espacement entre les grids */
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+}
+.hr_hide1,.hr_hide2,.hr_hide3{
+    display: none;
+}
+.hr_app{
+    display: block;
+}
+
+/* Partie Téléphone */
+    @media screen and (max-width: 50rem){
+        main figure{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            height: 55rem;
+            max-width: 90rem;
+        }
+    
+       
+        header div ul{
+            text-align: center;
+            grid-template-columns: repeat(5 ,1fr);
+            color: var(--color-header);
+            grid-gap: 1rem;
+            display: grid;
+            padding: 2rem;
+            margin-left: -2rem;
+        }
+        .logo{
+            width: 5rem;
+            height: 5rem;
+            clip-path: circle(50%);
+            z-index: 1;
+            margin-left: -2rem;
+        }
+        .logo1{
+            clip-path: circle(50%);
+            margin-left: 1rem;
+            margin-top: -2rem;
+            z-index: 1;
+            width: 5rem;
+            height: 5rem;
+        }
+    
+        .firstli{
+            grid-column: 1/10;
+    
+        }
+        .image4{
+            order: 2;
+            margin: auto;
+        }
+        .image2{
+            padding: 1rem;
+            margin: auto;
+        }
+        .hide1, .hide2, .hide3{
+            grid-template-columns: repeat(1, 1fr);
+            height: 55rem;
+        }
+        details ul {
+            padding-left: 1rem;
+            font-size: 1rem;
+        }
+     
+        figure p {
+            margin: auto;
+        }
+        figure h2 hr a time{
+            text-align: center;
+        }
+        li a{/* bouton des articles */
+            border: 0;
+            background: rgb(190, 187, 187);
+            cursor: pointer;
+            border-radius: 1rem;
+            display: block;
+            transition: all 400ms ease-in-out;
+            color: #f8f1f1;
+            line-height: 1rem;
+            padding: 1rem;
+            margin-right: -1rem;
+            margin-left: 1rem;
+            margin-bottom: 1rem;
+            margin-top: 1rem;
+            width: 8rem;
+            font-size: 1,2rem;
+        }
+        .art{
+            border: 0;
+            cursor: pointer;
+            border-radius: 1rem;
+            display: block;
+            transition: all 400ms ease-in-out;
+            color: #494747;
+            margin-right: -2rem;
+            margin-left: -2rem;
+            width: 7,5rem;
+            height: 3rem;  
+            line-height: 1rem;  
+        }
+        ul{
+            margin:auto;   
+        }
+        .art:hover{
+            background-color: #e6c1c1;
+            transition: all 500ms ease-in-out;
+        }
+        hr{ /* barre d'espace entre les articles */
+            margin-right: 2rem;
+            margin-left: 2rem;
+            max-width: 60rem;
+            margin-top:1rem;
+        }
+        h1,h2,p,figure,ul,ol{
+            text-align: center; 
+        }
+    }
